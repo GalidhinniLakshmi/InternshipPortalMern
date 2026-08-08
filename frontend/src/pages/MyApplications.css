@@ -1,0 +1,91 @@
+.myapps-container{
+    min-height:100vh;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    position:relative;
+    padding:120px 40px 40px;
+}
+
+.myapps-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.55);
+}
+
+.myapps-content{
+    position:relative;
+    z-index:2;
+}
+
+.myapps-title{
+    text-align:center;
+    color:white;
+    font-size:45px;
+    margin-bottom:40px;
+    text-shadow:2px 2px 8px black;
+}
+
+.application-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:30px;
+}
+
+.application-card{
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:20px;
+    padding:30px;
+    color:white;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+    transition:.3s;
+}
+
+.application-card:hover{
+    transform:translateY(-6px);
+}
+
+.application-card h2{
+    color:#FFD54F;
+    margin-bottom:18px;
+}
+
+.application-card p{
+    margin:10px 0;
+    font-size:17px;
+}
+
+.status{
+    display:inline-block;
+    margin-top:15px;
+    padding:8px 18px;
+    border-radius:25px;
+    font-weight:bold;
+    color:white;
+}
+
+.pending{
+    background:#f59e0b;
+}
+
+.accepted{
+    background:#16a34a;
+}
+
+.rejected{
+    background:#dc2626;
+}
+
+@media(max-width:768px){
+
+    .myapps-container{
+        padding:100px 20px 20px;
+    }
+
+    .myapps-title{
+        font-size:34px;
+    }
+
+}

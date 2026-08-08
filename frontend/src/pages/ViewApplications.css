@@ -1,0 +1,134 @@
+.viewapps-container{
+    min-height:100vh;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    position:relative;
+    padding:120px 40px 40px;
+}
+
+.viewapps-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.55);
+}
+
+.viewapps-content{
+    position:relative;
+    z-index:2;
+}
+
+.viewapps-title{
+    text-align:center;
+    color:white;
+    font-size:45px;
+    margin-bottom:40px;
+    text-shadow:2px 2px 8px black;
+}
+
+.application-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
+    gap:30px;
+}
+
+.application-card{
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:20px;
+    padding:30px;
+    color:white;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+    transition:.3s;
+}
+
+.application-card:hover{
+    transform:translateY(-6px);
+}
+
+.application-card h2{
+    color:#FFD54F;
+    margin-bottom:18px;
+}
+
+.application-card p{
+    margin:10px 0;
+    font-size:17px;
+}
+
+.status{
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:25px;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+.accepted{
+    background:#16a34a;
+}
+
+.rejected{
+    background:#dc2626;
+}
+
+.pending{
+    background:#f59e0b;
+}
+
+.button-group{
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+}
+
+.accept-btn,
+.reject-btn{
+    flex:1;
+    border:none;
+    padding:12px;
+    border-radius:30px;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.accept-btn{
+    background:#16a34a;
+}
+
+.accept-btn:hover{
+    background:#15803d;
+}
+
+.reject-btn{
+    background:#dc2626;
+}
+
+.reject-btn:hover{
+    background:#b91c1c;
+}
+
+.empty{
+    color:white;
+    text-align:center;
+    font-size:30px;
+}
+
+@media(max-width:768px){
+
+    .viewapps-container{
+        padding:100px 20px 20px;
+    }
+
+    .viewapps-title{
+        font-size:34px;
+    }
+
+    .button-group{
+        flex-direction:column;
+    }
+
+}

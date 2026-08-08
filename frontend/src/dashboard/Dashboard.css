@@ -1,0 +1,177 @@
+/* ===========================
+Dashboard Background
+=========================== */
+
+.dashboard{
+    min-height:100vh;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    position:relative;
+    padding:120px 40px 40px;
+}
+
+.dashboard-overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.55);
+}
+
+.dashboard-content{
+    position:relative;
+    z-index:2;
+}
+
+/* ===========================
+Heading
+=========================== */
+
+.dashboard h1{
+    color:white;
+    text-align:center;
+    font-size:46px;
+    margin-bottom:35px;
+    text-shadow:2px 2px 8px rgba(0,0,0,.8);
+}
+
+/* ===========================
+Welcome Card
+=========================== */
+
+.welcome-card{
+    width:700px;
+    max-width:100%;
+    margin:0 auto 45px;
+    padding:25px;
+    text-align:center;
+    border-radius:20px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.25);
+    color:white;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+.welcome-card h2{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.welcome-card p{
+    font-size:18px;
+    color:#f1f1f1;
+}
+
+/* ===========================
+Cards Grid
+=========================== */
+
+.dashboard-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+}
+
+/* ===========================
+Dashboard Card
+=========================== */
+
+.dashboard-card{
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    color:white;
+    transition:.4s;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+.dashboard-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 35px rgba(0,0,0,.4);
+}
+
+/* ===========================
+Icons
+=========================== */
+
+.icon{
+    font-size:65px;
+    margin-bottom:20px;
+}
+
+/* ===========================
+Card Text
+=========================== */
+
+.dashboard-card h3{
+    color:white;
+    font-size:28px;
+    margin-bottom:18px;
+}
+
+/* THIS WAS MISSING */
+
+.dashboard-card h2{
+    font-size:48px;
+    color:#FFD54F;
+    margin-top:15px;
+    margin-bottom:15px;
+    font-weight:bold;
+}
+
+.dashboard-card p{
+    color:#ececec;
+    font-size:17px;
+    line-height:1.6;
+    margin-bottom:30px;
+}
+
+/* ===========================
+Buttons
+=========================== */
+
+.dashboard-card button{
+    background:#ff4d4d;
+    color:white;
+    border:none;
+    padding:14px 35px;
+    border-radius:30px;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.dashboard-card button:hover{
+    background:#ff2d2d;
+    transform:scale(1.05);
+}
+
+/* ===========================
+Responsive
+=========================== */
+
+@media(max-width:768px){
+
+    .dashboard{
+        padding:100px 20px 20px;
+    }
+
+    .dashboard h1{
+        font-size:34px;
+    }
+
+    .welcome-card{
+        width:100%;
+    }
+
+    .dashboard-grid{
+        grid-template-columns:1fr;
+    }
+
+}

@@ -1,0 +1,125 @@
+/* ===========================
+   Background
+=========================== */
+
+.post-container {
+    min-height: 100vh;
+    padding: 120px 30px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.post-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.post-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===========================
+   Form
+=========================== */
+
+.post-card {
+    width: 750px;
+    max-width: 95%;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.post-card h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 34px;
+}
+
+.post-card p {
+    text-align: center;
+    color: #ddd;
+    margin-bottom: 30px;
+}
+
+/* ===========================
+   Inputs
+=========================== */
+
+.post-card input,
+.post-card textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 18px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.post-card input::placeholder,
+.post-card textarea::placeholder {
+    color: #e5e5e5;
+}
+
+.post-card textarea {
+    resize: none;
+}
+
+/* ===========================
+   Button
+=========================== */
+
+.post-card button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: #2563eb;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.post-card button:hover {
+    background: #1d4ed8;
+    transform: translateY(-3px);
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width:768px) {
+
+    .post-container {
+        padding: 100px 20px 20px;
+    }
+
+    .post-card {
+        padding: 25px;
+    }
+
+    .post-card h2 {
+        font-size: 28px;
+    }
+}
